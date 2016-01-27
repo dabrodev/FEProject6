@@ -55,7 +55,7 @@ $(function() {
      */
 
     it('menu is hidden', function() {
-  		expect($("body").hasClass("menu-hidden")).toBe(true);
+    		expect($("body").hasClass("menu-hidden")).toBe(true);
     });
 
      /* TODO: Write a test that ensures the menu changes
@@ -85,14 +85,14 @@ $(function() {
   	 * the use of Jasmine's beforeEach and asynchronous done() function.
   	 */
 
-  	beforeEach(function(done) {
-  		loadFeed(0, done);
-  	});
+    beforeEach(function(done) {
+    	loadFeed(0, done);
+    });
 
     it('single entry', function(done) {
-  		expect($(".feed .entry").length).not.toBe(0);
-  		done();
-  	});
+        expect($(".feed .entry").length).not.toBe(0);
+        done();
+    });
   });
 
   /* TODO: Write a new test suite named "New Feed Selection" */
