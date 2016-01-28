@@ -4,8 +4,8 @@ $(function() {
   describe('RSS Feeds', function() {
 
     it('are defined', function() {
-  		expect(allFeeds).toBeDefined();
-  		expect(allFeeds.length).not.toBe(0);
+    	expect(allFeeds).toBeDefined();
+    	expect(allFeeds.length).not.toBe(0);
     });
 
     // loop through each feed and check if the url is defined andnot empty
@@ -15,13 +15,13 @@ $(function() {
   			expect(feed.url.length).not.toBe(0);
   		});
     });
-   
+
     // loop through each feed and check if the url is defined andnot empty
     it('name defined and not empty', function() {
-  		allFeeds.forEach(function(feed) {
-  			expect(feed.name).toBeDefined();
-  			expect(feed.name.length).not.toBe(0);
-  		});
+    	allFeeds.forEach(function(feed) {
+    		expect(feed.name).toBeDefined();
+    		expect(feed.name.length).not.toBe(0);
+    	});
     });
   });
 
@@ -35,12 +35,12 @@ $(function() {
 
     // test the hiding and showing of the menu elements
     it('menu display and hide when cliced', function() {
-        // display menu
-        $(".menu-icon-link").click();
-        expect($("body").hasClass("menu-hidden")).toBe(false);
-        // hide menu
-        $(".menu-icon-link").click();
-        expect($("body").hasClass("menu-hidden")).toBe(true);
+       // display menu
+      $(".menu-icon-link").click();
+      expect($("body").hasClass("menu-hidden")).toBe(false);
+      // hide menu
+      $(".menu-icon-link").click();
+      expect($("body").hasClass("menu-hidden")).toBe(true);
     });
   });
 
@@ -52,11 +52,11 @@ $(function() {
     });
 
     it('contains at least one .entry element in .feed container', function() {
-        expect($(".feed .entry").length).not.toBe(0);
+      expect($(".feed .entry").length).not.toBe(0);
     });
   });
 
-  // Test suite about new feed selection" 
+  // Test suite about new feed selection"
   describe('New Feed Selection', function() {
 
     // Test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
@@ -64,13 +64,13 @@ $(function() {
         feedHeader2;
 
     beforeEach(function(done) {
-        loadFeed(0, function() { 
-        	feedHeader1 = $(".header-title").text();
-        	loadFeed(1, function() {
-                feedHeader2 = $(".header-title").text();
-                done();
-            });
+      loadFeed(0, function() {
+      	feedHeader1 = $(".header-title").text();
+      	loadFeed(1, function() {
+          feedHeader2 = $(".header-title").text();
+          done();
         });
+      });
     });
 
     // Compare the same content source(hader title) from 2 feeds, if they are different, it means content changes.
