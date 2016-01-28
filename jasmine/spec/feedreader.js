@@ -34,7 +34,7 @@ $(function() {
 		});
 
 		// test the hiding and showing of the menu elements
-		it('menu display and hide when cliced', function() {
+		it('menu display and hide when clicked', function() {
 			 // display menu
 			$(".menu-icon-link").click();
 			expect($("body").hasClass("menu-hidden")).toBe(false);
