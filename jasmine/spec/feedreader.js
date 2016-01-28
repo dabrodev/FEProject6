@@ -30,7 +30,7 @@ $(function() {
 
 		// test the menu is hidden by default
 		it('menu is hidden by default', function() {
-				expect($("body").hasClass("menu-hidden")).toBe(true);
+			expect($("body").hasClass("menu-hidden")).toBe(true);
 		});
 
 		// test the hiding and showing of the menu elements
@@ -60,24 +60,22 @@ $(function() {
 	describe('New Feed Selection', function() {
 
 		// Test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
-		var feedHeader1,
-				feedHeader2;
+		var feed1,
+			feed2;
 
 		beforeEach(function(done) {
 			loadFeed(0, function() {
-				feedHeader1 = $(".header-title").text();
+				feed1 = $(".feed").html();
 				loadFeed(1, function() {
-					feedHeader2 = $(".header-title").text();
+					feed2 = $(".feed").html();
 					done();
 				});
 			});
 		});
 
-		// Compare the same content source(hader title) from 2 feeds, if they are different, it means content changes.
+		// Compare the same content source from 2 feeds, if they are different, it means content changes.
 		it('content changes', function() {
-			expect(feedHeader1).not.toBe(feedHeader2);
-				//console.log(feedHeader1);
-				//console.log(feedHeader2);
+			expect(feed1).not.toEqual(feed2);
 		});
 	});
 }());
