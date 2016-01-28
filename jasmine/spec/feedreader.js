@@ -25,7 +25,7 @@ $(function() {
     });
   });
 
- // Test suite about menu
+  // Test suite about menu
   describe('The menu', function() {
 
     // test the hiding and showing of the menu elements
@@ -33,7 +33,7 @@ $(function() {
     		expect($("body").hasClass("menu-hidden")).toBe(true);
     });
 
-   // check the click handler and class
+    // check the click handler and class
     it('menu display and hide when cliced', function() {
         // display menu
         $(".menu-icon-link").click();
@@ -59,7 +59,7 @@ $(function() {
   // Test suite about new feed selection" 
   describe('New Feed Selection', function() {
 
-   // Test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
+    // Test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
     var feedHeader1,
         feedHeader2;
 
