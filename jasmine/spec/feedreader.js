@@ -28,12 +28,12 @@ $(function() {
   // Test suite about menu
   describe('The menu', function() {
 
-    // test the hiding and showing of the menu elements
+    // test the menu is hidden by default
     it('menu is hidden by default', function() {
     		expect($("body").hasClass("menu-hidden")).toBe(true);
     });
 
-    // check the click handler and class
+    // test the hiding and showing of the menu elements
     it('menu display and hide when cliced', function() {
         // display menu
         $(".menu-icon-link").click();
