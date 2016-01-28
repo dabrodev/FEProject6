@@ -1,4 +1,9 @@
-## To run tests visit the following url:
+
+##How to open the app
+
+To open the app please download or clone the repository and open the index.html file.
+
+## To see an online example please visit the following url:
 
 http://damiandabcom.github.io/FEProject6
 
